@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Reset de margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+  font-family: 'Inter', monospace;
+  background-color: #f8f9fa; /* Cor de fundo da página */
+}
+
+/* Adicione media queries para diferentes tamanhos de tela */
+@media screen and (max-width: 1024px) {
+  /* Ajuste o estilo para telas de até 1024px */
+  .pagina, .form {
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    width: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .search_icone {
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 834px) {
+  /* Ajuste o estilo para telas de até 834px */
+  .pagina, .form {
+    padding: 20px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Ajuste o estilo para telas de até 768px */
+  .pagina, .form {
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    width: auto;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .search_icone {
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Ajuste o estilo para telas de até 480px */
+  .pagina, .form {
+    padding: 10px;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+/* ///////////////////////////////////////////////////// */
+
+/* Estilo para o contêiner principal */
+.pagina {
+  display: flex;
+  align-items: flex-start; /* Alterado para alinhar itens no topo */
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Definindo uma largura máxima */
+  padding-top: 8%;
+}
+
+.pagina .card{
+  position: relative;
+  padding: 30px;
+  overflow: hidden;
+  transition: 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para o formulário */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Alterado para ocupar 100% da largura */
+  max-width: 400px; /* Adicionado uma largura máxima */
+  margin: 0 auto; /* Centralizar o formulário */
+}
+
+/* Estilo para os campos de entrada */
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.fundo{
+  background-image: url("img/paisagem.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+}
+
+/* Estilo para os botões */
+button {
+  width: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.botoes_form{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cadastrados {
+  background-color: #f2f2f2; /* Cor de fundo */
+  padding: 25px; /* Espaçamento interno */
+  border-radius: 10px; /* Arredondamento dos cantos */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  flex: 1;
+}
+
+/* Estilo para a seção de endereço cadastrado */
+.enderecocad {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  padding: 20px;
+  margin: 10px; /* Aumentando a margem para separação */
+  max-width: 400px; /* Adicionado uma largura máxima */
+}
+
+/* Estilo para a lista de cadastros */
+.lista_cadastros {
+  list-style: none;
+  padding: 0;
+  max-height: 200px; /* Definindo uma altura máxima */
+  overflow-y: auto; /* Adicionando uma barra de rolagem vertical quando necessário */
+}
+
+.lista_cadastros::webkit-scrollbar{
+  background-color: #1d1d1d;
+  width: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Estilo para os itens da lista de cadastros */
+.item_cadastro {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-cadastro:hover {
+  background-color: #e5e5e5; /* Cor de fundo ao passar o mouse */
+}
+
+.search{
+  position: relative;
+}
+
+.search_input{
+  position: relative;
+  width: 250px;
+}
+
+.search_icone{
+  position: absolute;
+  top: 50%;
+  left: 220px;
+  transform: translateY(-50%);
+  
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o título do formulário */
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+h2{
+  font-size: 25px;
+  color: #007bff;
+}
